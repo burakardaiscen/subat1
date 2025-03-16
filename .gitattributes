@@ -1,2 +1,75 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+1-) Dizi (Array) Nedir? Ne İşe Yarar? Gerçek Hayattan Örnek
+Dizi (Array) Nedir?
+Dizi, aynı türdeki verileri tek bir değişken içinde saklamamızı sağlayan bir veri yapısıdır.
+
+Ne İşe Yarar?
+
+Birden fazla veriyi tek bir değişken içinde saklamaya yarar.
+Döngülerle kolayca işlem yapmamızı sağlar.
+Verilere daha hızlı erişmemizi sağlar.
+Gerçek Hayattan Örnek:
+Bir okulda öğrencilerin numaralarını saklamak için dizi kullanılabilir:
+
+csharp
+Kopyala
+Düzenle
+int[] ogrenciNumaralari = {101, 102, 103, 104, 105};
+2-) Kullanıcıdan 5 sayı alıp bir diziye kaydeden ve ekrana yazdıran C# programı:
+csharp
+Kopyala
+Düzenle
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] sayilar = new int[5];
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write($"Lütfen {i + 1}. sayıyı girin: ");
+            sayilar[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.WriteLine("\nGirilen sayılar:");
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write(sayilar[i] + " ");
+        }
+    }
+}
+Ne Yapıyor?
+
+5 elemanlı bir dizi tanımlıyor.
+Kullanıcıdan 5 sayı alıp diziye kaydediyor.
+Son olarak girilen sayıları ekrana yazdırıyor.
+3-) Bir dizideki en büyük sayıyı bulan C# programı:
+csharp
+Kopyala
+Düzenle
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] sayilar = {23, 45, 67, 12, 89, 34};
+        int enBuyuk = sayilar[0];
+
+        for (int i = 1; i < sayilar.Length; i++)
+        {
+            if (sayilar[i] > enBuyuk)
+            {
+                enBuyuk = sayilar[i];
+            }
+        }
+
+        Console.WriteLine("Dizideki en büyük sayı: " + enBuyuk);
+    }
+}
+Ne Yapıyor?
+
+Bir dizi tanımlıyor.
+Dizideki en büyük sayıyı buluyor.
+Sonucu ekrana yazdırıyor.
